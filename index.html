@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kishalaya Sarangi — Portfolio V3</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="logo" onclick="showSection('home')">
+      KS<span>.</span>dev
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#phases">Phases</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">🔥 60 Days Streak — Phase 2 Complete!</div>
+      <h1>Kishalaya <span>Sarangi</span></h1>
+      <div class="typewriter">
+        <span id="typeText"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-bio">
+        B.Tech Mechanical Engineering · NIT Rourkela · Batch 2025–2029.
+        Building one project every day for 120 days to become a
+        <strong>full stack developer</strong> from zero.
+      </p>
+      <div class="hero-stats">
+        <div class="hstat"><span>60</span><label>Projects</label></div>
+        <div class="hstat"><span>60</span><label>Day Streak</label></div>
+        <div class="hstat"><span>8</span><label>Tech Stacks</label></div>
+        <div class="hstat"><span>60</span><label>Days Left</label></div>
+      </div>
+      <div class="hero-btns">
+        <a href="https://github.com/kishalayasarangi"
+           target="_blank" class="btn-primary">GitHub →</a>
+        <a href="#projects" class="btn-secondary">See Projects</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="terminal">
+        <div class="terminal-top">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">terminal</span>
+        </div>
+        <div class="terminal-body" id="terminalBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASES -->
+  <section class="section alt" id="phases">
+    <div class="section-inner">
+      <h2 class="section-title">120 Days Journey</h2>
+      <div class="phases-grid">
+        <div class="phase-card done">
+          <div class="phase-num">01</div>
+          <div class="phase-info">
+            <h3>Phase 1 — Foundations</h3>
+            <p>Days 1–30 · Python · HTML/CSS · JavaScript · APIs · DSA Basics</p>
+            <div class="phase-tag done-tag">✅ Complete</div>
+          </div>
+        </div>
+        <div class="phase-card done">
+          <div class="phase-num">02</div>
+          <div class="phase-info">
+            <h3>Phase 2 — Problem Solving</h3>
+            <p>Days 31–60 · Flask · Full Stack · WebSockets · LeetCode · Finance</p>
+            <div class="phase-tag done-tag">✅ Complete</div>
+          </div>
+        </div>
+        <div class="phase-card active">
+          <div class="phase-num">03</div>
+          <div class="phase-info">
+            <h3>Phase 3 — Real Projects</h3>
+            <p>Days 61–90 · Multi-file apps · Mech + Code · Open Source</p>
+            <div class="phase-tag active-tag">🔄 Starting Now</div>
+          </div>
+        </div>
+        <div class="phase-card upcoming">
+          <div class="phase-num">04</div>
+          <div class="phase-info">
+            <h3>Phase 4 — Exploration</h3>
+            <p>Days 91–120 · ML · React · DevOps · Capstone Project</p>
+            <div class="phase-tag upcoming-tag">⏳ Upcoming</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">All 60 Projects</h2>
+      <div class="filter-row">
+        <button class="filter-btn active"
+                onclick="filterProjects('all', this)">All (60)</button>
+        <button class="filter-btn"
+                onclick="filterProjects('python', this)">Python</button>
+        <button class="filter-btn"
+                onclick="filterProjects('web', this)">Web</button>
+        <button class="filter-btn"
+                onclick="filterProjects('flask', this)">Flask</button>
+        <button class="filter-btn"
+                onclick="filterProjects('dsa', this)">DSA</button>
+        <button class="filter-btn"
+                onclick="filterProjects('api', this)">APIs</button>
+        <button class="filter-btn"
+                onclick="filterProjects('tool', this)">Tools</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section alt" id="skills">
+    <div class="section-inner">
+      <h2 class="section-title">Skills After 60 Days</h2>
+      <div class="skills-container">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>JavaScript</span>
+            <span>C++</span><span>HTML5</span><span>CSS3</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Frameworks & Libraries</h3>
+          <div class="skill-tags">
+            <span>Flask</span><span>Socket.IO</span><span>Chart.js</span>
+            <span>BeautifulSoup</span><span>Pandas</span><span>Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools & Tech</h3>
+          <div class="skill-tags">
+            <span>Git</span><span>GitHub</span><span>SQLite</span>
+            <span>REST APIs</span><span>WebSockets</span><span>Canvas API</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Concepts</h3>
+          <div class="skill-tags">
+            <span>DSA</span><span>Full Stack</span><span>OOP</span>
+            <span>Real Time Apps</span><span>Data Viz</span><span>Encryption</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Open to internships · collaborations · tech talk</p>
+      <div class="contact-grid">
+        <a href="mailto:sarangikishalaya70@gmail.com" class="contact-card">
+          <span>✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">sarangikishalaya70@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://github.com/kishalayasarangi"
+           target="_blank" class="contact-card">
+          <span>⌨️</span>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-val">kishalayasarangi</div>
+          </div>
+        </a>
+        <div class="contact-card">
+          <span>📍</span>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">Rourkela, Odisha, India</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span>🎓</span>
+          <div>
+            <div class="contact-label">College</div>
+            <div class="contact-val">NIT Rourkela · 2025–2029</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with HTML & CSS · Day 60 of 120 · Kishalaya Sarangi</p>
+    <p style="margin-top:6px;color:#404050;">
+      60 days down. 60 to go. Phase 3 starts now. 🚀
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
